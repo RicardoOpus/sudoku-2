@@ -1,0 +1,122 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.problem-description {
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.solving {
+  color: #888;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.solution {
+  background: #1a1a1a;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 500px;
+}
+
+.solution h2 {
+  color: #4caf50;
+  margin-top: 0;
+}
+
+.solution p {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.solution strong {
+  color: #4caf50;
+  font-size: 1.3rem;
+}
+
+.sudoku-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.sudoku-grid {
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.sudoku-grid td {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #333;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  background: #fff;
+  transition: background-color 0.2s;
+}
+
+/* Thicker borders for 3x3 boxes */
+.sudoku-grid .row-border td {
+  border-bottom: 3px solid #000;
+}
+
+.sudoku-grid .col-border {
+  border-right: 3px solid #000;
+}
+
+/* Upper-right box highlighting */
+.sudoku-grid .upper-right-box {
+  background: #fffacd;
+}
+
+/* Initial clues styling */
+.sudoku-grid .initial-clue {
+  background: #f0f0f0;
+  color: #000;
+}
+
+/* Solution cell highlighting */
+.sudoku-grid .solution-cell {
+  background: #ff6b6b !important;
+  color: #fff;
+  font-weight: bold;
+  animation: pulse 1s ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .sudoku-grid td {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  
+  .app {
+    padding: 1rem;
+  }
+}
+
